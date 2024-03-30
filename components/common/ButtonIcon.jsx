@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { TouchableOpacity } from 'react-native';
-import SvgUri from 'expo-svg-uri';
+import React, {useState} from 'react';
+import {Image, Pressable} from 'react-native';
+
 import styles from './buttonicon.style';
 
-const ButtonIcon = ({ size, defaultSvgPath, pressedSvgPath, onPress }) => {
+const ButtonIcon = ({ size, defaultIcon, pressedIcon, onPress }) => {
     const [isPressed, setIsPressed] = useState(false);
-    //const iconPath = "../assets/icons/";
 
     const handlePress = () => {
         setIsPressed(true);
@@ -15,16 +14,16 @@ const ButtonIcon = ({ size, defaultSvgPath, pressedSvgPath, onPress }) => {
     };
 
     return (
-        <TouchableOpacity
-            style={styles.button}
+        <Pressable
+            style={styles.buttonContainer}
             onPress={handlePress}
         >
-            <SvgUri
-                width={size}
-                height={size}
-                source={isPressed ? pressedSvgPath : defaultSvgPath}
+            <Image
+                source={isPressed ? pressedIcon : defaultIcon}
+                resourceMode='cover'
+                style={styles.buttonImage(size)}
             />
-        </TouchableOpacity>
+        </Pressable>
     );
 };
 

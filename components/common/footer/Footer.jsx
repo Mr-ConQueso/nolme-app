@@ -1,34 +1,39 @@
 import React from 'react';
-import { View } from 'react-native';
+import {View} from 'react-native';
 import ButtonIcon from '../ButtonIcon';
 import styles from './footer.style';
+import {icons} from "../../../constants";
+import {Link} from "expo-router";
 
 const Footer = () => {
     return (
         <View style={styles.container}>
             {/* HOME */}
-            <ButtonIcon
-                size={30}
-                defaultSvgPath={require('../../../assets/icons/home.svg')}
-                pressedSvgPath={require('../../../assets/icons/home.svg')}
-                onPress={() => {
-                    // Handle navigation for button 1
-                }}
-            />
+            <Link href="/home" asChild >
+                <ButtonIcon
+                    size={30}
+                    defaultIcon={icons.home}
+                    pressedIcon={icons.home}
+                    onPress={() => {
+                    }}
+                />
+            </Link>
             {/* SCRIPT */}
-            <ButtonIcon
-                size={30}
-                defaultSvgPath={require('../../../assets/icons/script.svg')}
-                pressedSvgPath={require('../../../assets/icons/script.svg')}
-                onPress={() => {
-                    // Handle navigation for button 2
-                }}
-            />
+            <Link href="/learn-script" asChild >
+                <ButtonIcon
+                    size={30}
+                    defaultIcon={icons.script}
+                    pressedIcon={icons.script}
+                    onPress={() => {
+                        // Handle navigation for button 2
+                    }}
+                />
+            </Link>
             {/* EXERCISES */}
             <ButtonIcon
                 size={30}
-                defaultSvgPath={require('../../../assets/icons/exercices.svg')}
-                pressedSvgPath={require('../../../assets/icons/exercices.svg')}
+                defaultIcon={icons.exercises}
+                pressedIcon={icons.exercises}
                 onPress={() => {
                     // Handle navigation for button 3
                 }}
@@ -36,8 +41,8 @@ const Footer = () => {
             {/* DICTIONARY */}
             <ButtonIcon
                 size={30}
-                defaultSvgPath={require('../../../assets/icons/dictionary.svg')}
-                pressedSvgPath={require('../../../assets/icons/dictionary.svg')}
+                defaultIcon={icons.dictionary}
+                pressedIcon={icons.dictionary}
                 onPress={() => {
                     // Handle navigation for button 4
                 }}

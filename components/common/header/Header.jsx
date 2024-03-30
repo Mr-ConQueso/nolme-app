@@ -1,7 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
+import {View} from 'react-native';
 import ButtonIcon from '../ButtonIcon';
 import styles from './header.style';
+import {icons} from "../../../constants";
 
 const Header = () => {
     return (
@@ -9,8 +10,8 @@ const Header = () => {
             {/* Language button */}
             <ButtonIcon
                 size={30}
-                defaultSvgPath={require('../../../assets/icons/sindarin-flag.svg')}
-                pressedSvgPath={require('../../../assets/icons/sindarin-flag.svg')}
+                defaultSvgPath={icons.sindarinFlag}
+                pressedSvgPath={icons.sindarinFlag}
                 onPress={() => {
                     // Handle left button press
                 }}
@@ -18,8 +19,8 @@ const Header = () => {
             {/* Settings button */}
             <ButtonIcon
                 size={30}
-                defaultSvgPath={require('../../../assets/icons/settings.svg')}
-                pressedSvgPath={require('../../../assets/icons/settings.svg')}
+                defaultSvgPath={icons.settings}
+                pressedSvgPath={icons.settings}
                 onPress={() => {
                     // Handle right button press
                 }}

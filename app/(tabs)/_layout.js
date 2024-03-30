@@ -1,22 +1,25 @@
-import { Tabs } from "expo-router";
+import {Stack, Tabs} from "expo-router";
+
+export const unstable_settings = {
+    // Ensure any route can link back to `/`
+    initialRouteName: "home",
+};
 
 export default function TabsLayout() {
+    /*
+    const [fontsLoaded] = useFonts({
+        DMBold: require("../assets/fonts/DMSans-Bold.ttf"),
+        DMMedium: require("../assets/fonts/DMSans-Medium.ttf"),
+        DMRegular: require("../assets/fonts/DMSans-Regular.ttf"),
+    });
+
+    if (!fontsLoaded) {
+        return null;
+    }
+    */
     return (
-        <Tabs screenOptions={{ headerShown: false }}>
-            <Tabs.Screen
-                name="home"
-                options={{
-                    tabBarLabel: "Home",
-                    title: "Home",
-                }}
-            />
-            <Tabs.Screen
-                name="settings"
-                options={{
-                    tabBarLabel: "Settings",
-                    title: "Settings",
-                }}
-            />
-        </Tabs>
-    );
+        <Stack initialRouteName="home">
+            <Stack.Screen name="home" options={{ headerShown: false }} />
+        </Stack>
+    )
 }
