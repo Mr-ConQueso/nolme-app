@@ -34,6 +34,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "9616f646-e152-48ca-89b6-1a076bbfc010"
+      }
+    },
+    "owner": "mr.conqueso"
   }
 }
