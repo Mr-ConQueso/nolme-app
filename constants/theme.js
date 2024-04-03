@@ -1,3 +1,6 @@
+import clamp from "react-native-web/src/vendor/react-native/Utilities/clamp";
+import {responsiveWidth} from "react-native-responsive-dimensions";
+
 const COLORS = {
   primary: "#312651",
   secondary: "#444262",
@@ -11,18 +14,18 @@ const COLORS = {
 };
 
 const FONT = {
-  regular: "DMRegular",
-  medium: "DMMedium",
-  bold: "DMBold",
+  regular: "Lato",
+  bold: "Lato-Bold",
+  tengwar: "Tengwar-Feanor",
+  cirth: "Tolkien-Dwarf-Runes",
 };
 
 const SIZES = {
-  xSmall: 10,
-  small: 12,
-  medium: 16,
-  large: 20,
-  xLarge: 24,
-  xxLarge: 32,
+  paragraphSmall: clamp(16, responsiveWidth(4), 20),
+
+  h1: clamp(24, responsiveWidth(4), 30),
+
+  defaultRounding: 15,
 };
 
 const SHADOWS = {

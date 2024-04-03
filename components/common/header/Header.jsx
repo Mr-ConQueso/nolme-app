@@ -1,8 +1,9 @@
 import React from 'react';
 import {View} from 'react-native';
-import ButtonIcon from '../ButtonIcon';
+import ButtonIcon from '../buttons/ButtonIcon';
 import styles from './header.style';
 import {icons} from "../../../constants";
+import {Link} from "expo-router";
 
 const Header = () => {
     return (
@@ -10,21 +11,15 @@ const Header = () => {
             {/* Language button */}
             <ButtonIcon
                 size={30}
-                defaultSvgPath={icons.sindarinFlag}
-                pressedSvgPath={icons.sindarinFlag}
-                onPress={() => {
-                    // Handle left button press
-                }}
+                defaultIcon={icons.sindarinFlag}
             />
             {/* Settings button */}
-            <ButtonIcon
-                size={30}
-                defaultSvgPath={icons.settings}
-                pressedSvgPath={icons.settings}
-                onPress={() => {
-                    // Handle right button press
-                }}
-            />
+            <Link href="/settings" asChild>
+                <ButtonIcon
+                    size={30}
+                    defaultIcon={icons.settings}
+                />
+            </Link>
         </View>
     );
 };
