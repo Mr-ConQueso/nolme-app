@@ -4,7 +4,8 @@ import {useCallback} from "react";
 
 const Layout = () => {
     const [fontsLoaded, fontError] = useFonts({
-        'Tengwar-Feanor': require('../assets/fonts/Tengwar Feanor.ttf'),
+        'Tengwar-Telcontar': require('../assets/fonts/Tengwar Telcontar.ttf'),
+        'Tengwar-Telcontar-Bold': require('../assets/fonts/Tengwar Telcontar Bold.ttf'),
         'Tolkien-Dwarf-Runes': require('../assets/fonts/Tolkien Dwarf Runes.ttf'),
         'Lato': require('../assets/fonts/Lato.ttf'),
         'Lato-Bold': require('../assets/fonts/Lato-Bold.ttf'),

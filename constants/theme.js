@@ -16,7 +16,8 @@ const COLORS = {
 const FONT = {
   regular: "Lato",
   bold: "Lato-Bold",
-  tengwar: "Tengwar-Feanor",
+  tengwar: "Tengwar-Telcontar",
+  tengwar_bold: "Tengwar-Telcontar-Bold",
   cirth: "Tolkien-Dwarf-Runes",
 };
 
@@ -28,27 +29,4 @@ const SIZES = {
   defaultRounding: 15,
 };
 
-const SHADOWS = {
-  small: {
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 2,
-  },
-  medium: {
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 5.84,
-    elevation: 5,
-  },
-};
-
-export { COLORS, FONT, SIZES, SHADOWS };
+export { COLORS, FONT, SIZES };

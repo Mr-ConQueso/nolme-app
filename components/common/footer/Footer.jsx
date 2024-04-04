@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {Image, Pressable, Text, View} from 'react-native';
 import ButtonIcon from '../buttons/ButtonIcon';
 import styles from './footer.style';
 import {icons} from "../../../constants";
@@ -18,18 +18,25 @@ const Footer = () => {
             </Link>
 
             {/* SCRIPT */}
-            <Link href="/sindarin/learn-script" asChild >
+            <Link href="/sindarin/learn-tengwar" asChild >
                 <ButtonIcon
                     size={30}
                     defaultIcon={icons.script}
+                    url="/sindarin/learn-tengwar"
                 />
+            </Link>
+
+            <Link href="/sindarin/learn-tengwar" asChild>
+                <Pressable>
+                    <Text>Tengwar</Text>
+                </Pressable>
             </Link>
 
             {/* EXERCISES */}
             <Link href="/sindarin/exercises" asChild >
                 <ButtonIcon
                     size={30}
-                    defaultIcon={icons.exercises}
+                    defaultIcon={icons.script}
                 />
             </Link>
 

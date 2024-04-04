@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import {COLORS} from "../../../constants";
+import {COLORS, SIZES} from "../../../constants";
 
 export default StyleSheet.create({
     pressableContainer: {
@@ -9,7 +9,7 @@ export default StyleSheet.create({
     },
     buttonText: {
         color: COLORS.white,
-        fontSize: 16,
+        fontSize: SIZES.paragraphSmall,
         fontWeight: 'bold',
     },
 });

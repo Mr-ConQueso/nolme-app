@@ -1,24 +1,23 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Pressable, Text} from 'react-native';
 import styles from './textbutton.style';
 
-const TextButton = ({ text }) => {
-    const [pressed, setPressed] = useState(false);
-
+const TextButton = ({text, onTap}) => {
     return (
         <Pressable
-            onPressIn={() => setPressed(true)}
-            onPressOut={() => setPressed(false)}
+            onPress={onTap}
             style={({ pressed }) => [
                 {
-                    borderColor: pressed ? 'rgb(210, 230, 255)' : 'white',
+                    opacity: pressed
+                        ? 0.2
+                        : 1,
+                    backgroundColor: '#2277ee'
                 },
-                styles.pressableContainer, // Apply additional styles from styles.js
-            ]}
-        >
-            <Text style={styles.buttonText}>{pressed ? 'Pressed!' : text}</Text>
+                styles.pressableContainer,
+            ]}>
+            <Text style={styles.buttonText}>{ text }</Text>
         </Pressable>
     );
-};
+}
 
 export default TextButton;

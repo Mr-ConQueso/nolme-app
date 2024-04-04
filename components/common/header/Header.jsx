@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {Pressable, Text, View} from 'react-native';
 import ButtonIcon from '../buttons/ButtonIcon';
 import styles from './header.style';
 import {icons} from "../../../constants";
@@ -20,6 +20,7 @@ const Header = () => {
                     defaultIcon={icons.settings}
                 />
             </Link>
+
         </View>
     );
 };

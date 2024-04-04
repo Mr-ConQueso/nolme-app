@@ -1,25 +1,32 @@
 import React from 'react';
-import { Image, Pressable } from 'react-native';
-
+import {Image, Pressable} from 'react-native';
 import styles from './buttonicon.style';
+import {useNavigation} from "expo-router";
 
-const ButtonIcon = React.forwardRef(({ size, defaultIcon }, ref) => {
+const ButtonIcon = ({ size, defaultIcon, url }) => {
+    const navigation = useNavigation();
+
+    const handlePress = () => {
+        navigation.navigate(url);
+    };
+
     return (
         <Pressable
-            ref={ref}
+            onPress={handlePress}
             style={({ pressed }) => [
                 {
-                    borderColor: pressed ? 'rgb(210, 230, 255)' : 'white',
+                    opacity: pressed
+                        ? 0.2
+                        : 1,
                 },
-            ]}
-        >
+                styles.pressableContainer,
+            ]}>
             <Image
-                source={defaultIcon}
-                resourceMode="cover"
                 style={styles.buttonImage(size)}
+                source={ defaultIcon }
             />
         </Pressable>
     );
-});
+};
 
 export default ButtonIcon;
