@@ -5,7 +5,7 @@ import AppTengwarText from "../../../common/AppTengwarText";
 import AppText from "../../../common/AppText";
 import icons from "../../../../constants/icons";
 
-const DictionaryPage = ({ transliteratedWord, translatedWord, wordType, pronunciationText, descriptionText, conceptualDevelopment}) => {
+const DictionaryEntry = ({ transliteratedWord, translatedWord, wordType, pronunciationText, descriptionText, conceptualDevelopment}) => {
     return (
         <View style={styles.container}>
             <View style={styles.row}>
@@ -95,4 +95,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default DictionaryPage;
+export default DictionaryEntry;
