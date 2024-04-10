@@ -1,11 +1,11 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {ScrollView, Text, View} from 'react-native';
 import styles from './exercisesPage.style';
 import TextButton from "../../../common/buttons/TextButton";
 
 const ExercisesPage = () => {
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <View style={styles.content}>
 
                 <Text style={styles.heading}>
@@ -17,7 +17,7 @@ const ExercisesPage = () => {
 
                 <TextButton text={"Learn the script"} style={styles.button} />
             </View>
-        </View>
+        </ScrollView>
     );
 };
 

@@ -1,8 +1,6 @@
 import React from 'react';
-import {Image, Pressable, Text, View} from 'react-native';
-import ButtonIcon from '../buttons/ButtonIcon';
+import {Pressable, Text, View} from 'react-native';
 import styles from './footer.style';
-import {icons} from "../../../constants";
 import {Link} from "expo-router";
 
 const Footer = () => {
@@ -10,22 +8,13 @@ const Footer = () => {
         <View style={styles.container}>
 
             {/* HOME */}
-            <Link href="/index" asChild >
-                <ButtonIcon
-                    size={30}
-                    defaultIcon={icons.home}
-                />
+            <Link href="/sindarin/" asChild>
+                <Pressable>
+                    <Text>Home</Text>
+                </Pressable>
             </Link>
 
             {/* SCRIPT */}
-            <Link href="/sindarin/learn-tengwar" asChild >
-                <ButtonIcon
-                    size={30}
-                    defaultIcon={icons.script}
-                    url="/sindarin/learn-tengwar"
-                />
-            </Link>
-
             <Link href="/sindarin/learn-tengwar" asChild>
                 <Pressable>
                     <Text>Tengwar</Text>
@@ -33,19 +22,17 @@ const Footer = () => {
             </Link>
 
             {/* EXERCISES */}
-            <Link href="/sindarin/exercises" asChild >
-                <ButtonIcon
-                    size={30}
-                    defaultIcon={icons.script}
-                />
+            <Link href="/sindarin/exercises" asChild>
+                <Pressable>
+                    <Text>Exercises</Text>
+                </Pressable>
             </Link>
 
             {/* DICTIONARY */}
-            <Link href="/sindarin/dictionary" asChild >
-                <ButtonIcon
-                    size={30}
-                    defaultIcon={icons.dictionary}
-                />
+            <Link href="/sindarin/dictionary" asChild>
+                <Pressable>
+                    <Text>Dictionary</Text>
+                </Pressable>
             </Link>
         </View>
     );

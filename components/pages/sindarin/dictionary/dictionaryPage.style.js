@@ -1,24 +1,44 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import {COLORS} from "../../../../constants";
+import clamp from "react-native-web/src/vendor/react-native/Utilities/clamp";
+import {responsiveWidth} from "react-native-responsive-dimensions";
 
-export default StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
+        alignSelf   : "center",
+        padding: 16,
+        width: clamp(400, responsiveWidth(100), 700),
+    },
+    searchContainer: {
+        flexDirection: 'row',
+        marginBottom: 16,
+    },
+    searchInput: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: COLORS.white,
+        marginRight: 8,
+        borderWidth: 1,
+        borderColor: COLORS.lightGray,
+        backgroundColor: COLORS.gray,
+        color: COLORS.lightGray,
+        borderRadius: 5,
+        padding: 8,
     },
-    content: {
+    switchContainer: {
+        flexDirection: 'row',
         alignItems: 'center',
+        padding: 15
     },
-    heading: {
-        fontSize: 24,
+    itemContainer: {
+        marginBottom: 8,
+    },
+    word: {
+        fontSize: 18,
         fontWeight: 'bold',
-        marginBottom: 10,
+        marginBottom: 4,
     },
-    paragraph: {
+    definition: {
         fontSize: 16,
-        marginBottom: 20,
-        textAlign: 'center',
     },
 });
+
+export default styles;

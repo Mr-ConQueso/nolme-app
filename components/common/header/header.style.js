@@ -6,9 +6,10 @@ export default StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
-        height: 60,
-        backgroundColor: COLORS.white,
-        borderBottomWidth: 1,
+        backgroundColor: COLORS.background,
+        borderBottomWidth: 3,
         borderBottomColor: COLORS.gray,
+        paddingTop: 10,
+        paddingBottom: 10
     },
 });

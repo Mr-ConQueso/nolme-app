@@ -8,7 +8,7 @@ export default StyleSheet.create({
         borderRadius: 5,
     },
     buttonText: {
-        color: COLORS.white,
+        color: COLORS.text,
         fontSize: SIZES.paragraphSmall,
         fontWeight: 'bold',
     },

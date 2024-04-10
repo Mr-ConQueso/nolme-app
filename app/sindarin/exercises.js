@@ -1,14 +1,16 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import {Stack} from "expo-router";
 import ExercisesPage from "../../components/pages/sindarin/exercises/ExercisesPage";
 import Footer from "../../components/common/footer/Footer";
+import Header from "../../components/common/header/Header";
 
 export default function CenteredPage() {
     return (
-        <View>
-            <Stack.Screen options={{ headerShown: false, title: "Settings" }} />
-            <Text>Index page of Exercises Tab</Text>
+        <View style={{flex: 1}}>
+            <Stack.Screen options={{ headerShown: false, title: "Exercises" }} />
+
+            <Header />
 
             <ExercisesPage />
 

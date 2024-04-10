@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text } from 'react-native';
-import {SIZES, FONT} from "../../constants";
+import {Text} from 'react-native';
+import {COLORS, FONT, SIZES} from "../../constants";
 
-const AppText = ({ children }) => {
+const AppText = ({ children, style}) => {
     return (
-        <Text style={styles.text}>
+        <Text style={[styles.text, style]}>
             {children}
         </Text>
     );
@@ -13,8 +13,9 @@ const AppText = ({ children }) => {
 const styles = {
     text: {
         fontSize: SIZES.paragraphSmall,
-        lineHeight: 15,
-        fontFamily: FONT.regular
+        lineHeight: 20,
+        fontFamily: FONT.regular,
+        color: COLORS.text
     },
 };
 

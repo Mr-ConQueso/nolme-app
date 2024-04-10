@@ -1,10 +1,10 @@
 import React from 'react';
-import {ScrollView, Text, View} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import styles from './learnTengwarPage.style';
 import TextButton from "../../../common/buttons/TextButton";
-import TengwarScriptButton from "../../../common/buttons/TengwarScriptButton";
 import AppText from "../../../common/AppText";
 import AppH1 from "../../../common/AppH1";
+import TengwarScriptButton from "../../../common/buttons/TengwarScriptButton";
 
 const ConsonantButtonGrid = () => {
 
@@ -40,11 +40,11 @@ const ConsonantButtonGrid = () => {
     };
 
     return (
-        <ScrollView contentContainerStyle={styles.buttonGrid}>
+        <View contentContainerStyle={styles.buttonGrid}>
             {Object.entries(consonantsDictionary).map(([key, value]) => (
                 <TengwarScriptButton key={key} scriptIcon={value.scriptIcon} scriptPronunciation={value.pronunciationText} />
             ))}
-        </ScrollView>
+        </View>
     );
 };
 
@@ -66,11 +66,11 @@ const VowelButtonGrid = () => {
     };
 
     return (
-        <ScrollView contentContainerStyle={styles.buttonGrid}>
+        <View contentContainerStyle={styles.buttonGrid}>
             {Object.entries(consonantsDictionary).map(([key, value]) => (
                 <TengwarScriptButton key={key} scriptIcon={value.scriptIcon} scriptPronunciation={value.pronunciationText} />
             ))}
-        </ScrollView>
+        </View>
     );
 };
 
@@ -86,11 +86,11 @@ const DiphthongButtonGrid = () => {
     };
 
     return (
-        <ScrollView contentContainerStyle={styles.buttonGrid}>
+        <View contentContainerStyle={styles.buttonGrid}>
             {Object.entries(consonantsDictionary).map(([key, value]) => (
                 <TengwarScriptButton key={key} scriptIcon={value.scriptIcon} scriptPronunciation={value.pronunciationText} />
             ))}
-        </ScrollView>
+        </View>
     );
 };
 
@@ -106,11 +106,11 @@ const SymbolButtonGrid = () => {
     };
 
     return (
-        <ScrollView contentContainerStyle={styles.buttonGrid}>
+        <View contentContainerStyle={styles.buttonGrid}>
             {Object.entries(consonantsDictionary).map(([key, value]) => (
                 <TengwarScriptButton key={key} scriptIcon={value.scriptIcon} scriptPronunciation={value.pronunciationText} />
             ))}
-        </ScrollView>
+        </View>
     );
 };
 
@@ -130,11 +130,11 @@ const NumberButtonGrid = () => {
     };
 
     return (
-        <ScrollView contentContainerStyle={styles.buttonGrid}>
+        <View contentContainerStyle={styles.buttonGrid}>
             {Object.entries(consonantsDictionary).map(([key, value]) => (
                 <TengwarScriptButton key={key} scriptIcon={value.scriptIcon} scriptPronunciation={value.pronunciationText} />
             ))}
-        </ScrollView>
+        </View>
     );
 };
 

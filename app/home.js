@@ -12,7 +12,7 @@ SplashScreen.preventAutoHideAsync();
 export default function App() {
 
     return (
-    <View style={{flex: 1, backgroundColor: COLORS.lightWhite}}>
+    <View style={{flex: 1, backgroundColor: COLORS.background}}>
         <Stack.Screen options={{headerShown: false, title: "Home"}}/>
 
         <Header/>

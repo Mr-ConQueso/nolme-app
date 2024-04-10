@@ -6,9 +6,13 @@ export default StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
-        height: 60,
-        backgroundColor: COLORS.white,
-        borderTopWidth: 1,
+        backgroundColor: COLORS.background,
+        borderTopWidth: 3,
         borderTopColor: COLORS.gray,
+        position: 'absolute',
+        bottom: 0,
+        width: '100%',
+        paddingTop: 20,
+        paddingBottom: 20
     },
 });

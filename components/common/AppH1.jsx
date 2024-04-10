@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from 'react-native';
-import {SIZES, FONT} from "../../constants";
+import {SIZES, FONT, COLORS} from "../../constants";
 
 const AppH1 = ({ children, style }) => {
     return (
@@ -15,6 +15,7 @@ const styles = {
         fontFamily: FONT.bold,
         fontSize: SIZES.h1,
         lineHeight: 15,
+        textColor: COLORS.heading
     },
 };
 

@@ -1,14 +1,17 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import DictionaryPage from "../../components/pages/sindarin/dictionary/DictionaryPage";
 import {Stack} from "expo-router";
 import Footer from "../../components/common/footer/Footer";
+import Header from "../../components/common/header/Header";
+import {COLORS} from "../../constants";
 
 export default function CenteredPage() {
     return (
-        <View>
-            <Stack.Screen options={{ headerShown: false, title: "Settings" }} />
-            <Text>Index page of Dictionary Tab</Text>
+        <View style={{flex: 1, backgroundColor: COLORS.background}}>
+            <Stack.Screen options={{ headerShown: false, title: "Dictionary" }} />
+
+            <Header />
 
             <DictionaryPage />
 
