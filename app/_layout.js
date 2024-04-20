@@ -1,31 +1,62 @@
-import {useFonts} from "expo-font";
-import {SplashScreen, Stack} from "expo-router";
-import {useCallback} from "react";
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import { useFonts } from 'expo-font';
+import { Stack } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
+import { useEffect } from 'react';
 
-const Layout = () => {
-    const [fontsLoaded, fontError] = useFonts({
-        'Tengwar-Telcontar': require('../assets/fonts/Tengwar Telcontar.ttf'),
-        'Tengwar-Telcontar-Bold': require('../assets/fonts/Tengwar Telcontar Bold.ttf'),
-        'Tolkien-Dwarf-Runes': require('../assets/fonts/Tolkien Dwarf Runes.ttf'),
-        'Lato': require('../assets/fonts/Lato.ttf'),
-        'Lato-Bold': require('../assets/fonts/Lato-Bold.ttf'),
-    });
+import { useColorScheme } from '../components/theme/useColorScheme';
 
-    const onLayoutRootView = useCallback(async () => {
-        if (fontsLoaded || fontError) {
-            await SplashScreen.hideAsync();
-        }
-    }, [fontsLoaded, fontError]);
+export {
+  // Catch any errors thrown by the Layout component.
+  ErrorBoundary,
+} from 'expo-router';
 
-    if (!fontsLoaded && !fontError) {
-        return null;
-    }
-
-    return (
-        <Stack initialRouteName="home">
-            <Stack.Screen name="home" />
-        </Stack>
-    )
+export const unstable_settings = {
+  // Ensure that reloading on `/modal` keeps a back button present.
+  initialRouteName: '(tabs)',
 };
 
-export default Layout;
+// Prevent the splash screen from auto-hiding before asset loading is complete.
+SplashScreen.preventAutoHideAsync();
+
+export default function RootLayout() {
+  const [loaded, error] = useFonts({
+    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    Lato: require('../assets/fonts/Lato.ttf'),
+    Lato_Bold: require('../assets/fonts/Lato-Bold.ttf'),
+    Tengwar: require('../assets/fonts/Tengwar Telcontar.ttf'),
+    ...FontAwesome.font,
+  });
+
+  // Expo Router uses Error Boundaries to catch errors in the navigation tree.
+  useEffect(() => {
+    if (error) throw error;
+  }, [error]);
+
+  useEffect(() => {
+    if (loaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [loaded]);
+
+  if (!loaded) {
+    return null;
+  }
+
+  return <RootLayoutNav />;
+}
+
+function RootLayoutNav() {
+  const colorScheme = useColorScheme();
+
+  return (
+    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="languageModal" options={{ presentation: 'modal' }} />
+        <Stack.Screen name="userModal" options={{ presentation: 'modal' }} />
+      </Stack>
+    </ThemeProvider>
+  );
+}
