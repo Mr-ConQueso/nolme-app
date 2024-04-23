@@ -4,8 +4,6 @@ import Colors from "../../constants/Colors";
 import AppView from "../../components/theme/AppView";
 import AppH1 from "../../components/theme/AppH1";
 import {SIZES} from "../../constants/Theme";
-import {responsiveWidth} from "react-native-responsive-dimensions";
-import clamp from "react-native-web/src/vendor/react-native/Utilities/clamp";
 import {Link} from "expo-router";
 
 const ExerciseButton = ({title, onTap, style}) => {
