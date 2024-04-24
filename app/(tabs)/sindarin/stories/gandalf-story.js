@@ -1,10 +1,11 @@
 import React from 'react';
 import {Image, Platform, Pressable, SafeAreaView, ScrollView, StyleSheet} from 'react-native';
-import Colors from "../../../constants/Colors";
-import AppView from "../../../components/theme/AppView";
-import AppH1 from "../../../components/theme/AppH1";
-import {SIZES} from "../../../constants/Theme";
+import Colors from "../../../../constants/Colors";
+import AppView from "../../../../components/theme/AppView";
+import AppH1 from "../../../../components/theme/AppH1";
+import {SIZES} from "../../../../constants/Theme";
 import {responsiveWidth} from "react-native-responsive-dimensions";
+import ExerciseModal from "../../../../components/ExerciseModal";
 
 const ExerciseButton = ({title, onTap, style}) => {
   return (
@@ -31,7 +32,7 @@ export default function ExercisesScreen() {
               
               <AppView style={styles.backgroundContainer}>
                   <Image
-                      source={require('../../../assets/images/characters/gandalf.png')} // Replace './path_to_your_image.jpg' with the actual path to your image
+                      source={require('../../../../assets/images/characters/gandalf.png')} // Replace './path_to_your_image.jpg' with the actual path to your image
                       style={{ width: responsiveWidth(100), height: responsiveWidth(100) }} // Set width and height to 200px
                   />
               </AppView>

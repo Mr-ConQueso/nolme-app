@@ -1,8 +1,8 @@
 import React from "react";
 import {SafeAreaView, StyleSheet,} from "react-native";
-import DictionaryList from "../../components/dictionary/DictionaryList";
-import Colors from "../../constants/Colors";
-import fakeData from "../../data/dictionaries/elvish/word-dictionary.json";
+import DictionaryList from "../../../components/dictionary/DictionaryList";
+import Colors from "../../../constants/Colors";
+import fakeData from "../../../data/dictionaries/elvish/word-dictionary.json";
 
 export default function DictionaryScreen() {
 

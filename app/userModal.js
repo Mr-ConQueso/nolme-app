@@ -7,10 +7,10 @@ import AppH1 from "../components/theme/AppH1";
 import AppH2 from "../components/theme/AppH2";
 import {responsiveWidth} from "react-native-responsive-dimensions";
 import clamp from "react-native-web/src/vendor/react-native/Utilities/clamp";
-import StatsOverviewBox from "../components/StatsOverviewBox";
-import StatsAchievementsBox from "../components/StatsAchievementsBox";
+import StatsOverviewBox from "../components/exercises/StatsOverviewBox";
+import StatsAchievementsBox from "../components/exercises/StatsAchievementsBox";
 import icons from "../constants/Icons";
-import StatsProgressBox from "../components/StatsProgressBox";
+import StatsProgressBox from "../components/exercises/StatsProgressBox";
 
 
 let IsPhoneSize = () => {

@@ -3,8 +3,9 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import {Link, Tabs} from 'expo-router';
 import {Pressable} from 'react-native';
 
-import Colors from '../../constants/Colors';
-import {useClientOnlyValue} from '../../components/theme/useClientOnlyValue';
+import Colors from '../../../constants/Colors';
+import {useClientOnlyValue} from '../../../components/theme/useClientOnlyValue';
+import ExerciseModal from "../../../components/ExerciseModal";
 
 function TabBarFocusableIcon(focused, defaultImg, focusedImg) {
     if (focused) {
@@ -104,7 +105,7 @@ export default function TabLayout() {
         <Tabs.Screen
             name="dictionary"
             options={{
-                title: 'dictionary',
+                title: 'Dictionary',
                 headerShown: false,
                 tabBarIcon: ({ color }) => <TabBarIcon name="book" color={color} />,
             }}

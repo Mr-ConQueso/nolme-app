@@ -1,12 +1,12 @@
 import {FlatList, Image, SafeAreaView, StyleSheet,} from "react-native";
-import Exercises from "../../components/Exercises";
+import Exercises from "../../../components/exercises/Exercises";
 import React from "react";
 import {useNavigation} from "@react-navigation/native";
-import data from "../../data/courseData.json";
+import data from "../../../data/courseData.json";
 
 import {StatusBar} from "expo-status-bar";
-import Colors from "../../constants/Colors";
-import AppView from "../../components/theme/AppView";
+import Colors from "../../../constants/Colors";
+import AppView from "../../../components/theme/AppView";
 
 const Home = () => {
   const navigation = useNavigation();
@@ -24,7 +24,7 @@ const Home = () => {
               <AppView style={styles.body}>
                 <Image
                     style={styles.unitLogo}
-                    source={require("../../assets/icons/unit1.png")}
+                    source={require("../../../assets/icons/unit1.png")}
                 />
               </AppView>
             }
@@ -32,7 +32,7 @@ const Home = () => {
               <AppView style={styles.body}>
                 <Image
                     style={styles.unitLogo}
-                    source={require("../../assets/icons/unit2.png")}
+                    source={require("../../../assets/icons/unit2.png")}
                 />
               </AppView>
             }

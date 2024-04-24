@@ -67,7 +67,6 @@ const styles= ({
         fontSize: 24,
         fontWeight: 'bold',
         marginRight: 10,
-        fontFamily: "Tengwar"
     },
     transliteratedWord: {
         fontSize: 18,

@@ -11,7 +11,7 @@ import { RectButton } from "react-native-gesture-handler";
 import {responsiveWidth} from "react-native-responsive-dimensions";
 import Colors from "../constants/Colors";
 
-const Footer = ({ correctAnswer, checking }) => {
+const ExerciseModal = ({ correctAnswer, checking }) => {
     const insets = useSafeAreaInsets();
     const wordArrayList = useSelector((state) => state.wordList);
     const [check, SetCheck] = useState(false);
@@ -174,4 +174,4 @@ const styles = ({
     },
 });
 
-export default Footer;
+export default ExerciseModal;

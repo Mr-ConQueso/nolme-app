@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native'; // Import Image component
-import { SIZES } from "../constants/Theme";
-import Colors from "../constants/Colors";
-import AppView from "./theme/AppView";
+import { SIZES } from "../../constants/Theme";
+import Colors from "../../constants/Colors";
+import AppView from "../theme/AppView";
 import { responsiveHeight, responsiveWidth } from "react-native-responsive-dimensions";
 import { FontAwesome } from '@expo/vector-icons';
-import AppH1 from "./theme/AppH1";
-import AppH2 from "./theme/AppH2"; // Import FontAwesome component for circle icon
+import AppH1 from "../theme/AppH1";
+import AppH2 from "../theme/AppH2"; // Import FontAwesome component for circle icon
 
 export default function StatsProgressBox({ achievementIcon }) {
 

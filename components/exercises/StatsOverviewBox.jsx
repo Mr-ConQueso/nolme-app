@@ -1,10 +1,10 @@
 import React from 'react';
 import {Image, StyleSheet} from 'react-native';
-import {SIZES} from "../constants/Theme";
-import Colors from "../constants/Colors";
-import AppView from "./theme/AppView";
-import AppH2 from "./theme/AppH2";
-import AppH1 from "./theme/AppH1";
+import {SIZES} from "../../constants/Theme";
+import Colors from "../../constants/Colors";
+import AppView from "../theme/AppView";
+import AppH2 from "../theme/AppH2";
+import AppH1 from "../theme/AppH1";
 import {responsiveWidth} from "react-native-responsive-dimensions";
 
 export default function StatsAchievementsBox({ icon, title, text }) {

@@ -1,62 +1,94 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
+import {DarkTheme, DefaultTheme, ThemeProvider} from '@react-navigation/native';
+import {
+  Lato_400Regular,
+  Lato_400Regular_Italic,
+  Lato_700Bold,
+  Lato_700Bold_Italic,
+  useFonts
+} from '@expo-google-fonts/lato';
+import {Slot, Stack} from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
+import {useCallback} from 'react';
 
-import { useColorScheme } from '../components/theme/useColorScheme';
+import {useColorScheme} from '../components/theme/useColorScheme';
+import {ClerkProvider, useAuth} from "@clerk/clerk-expo";
+import * as SecureStore from "expo-secure-store"
+
+const EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
 export {
-  // Catch any errors thrown by the Layout component.
   ErrorBoundary,
 } from 'expo-router';
 
 export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
   initialRouteName: '(tabs)',
 };
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const [loaded, error] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-    Lato: require('../assets/fonts/Lato.ttf'),
-    Lato_Bold: require('../assets/fonts/Lato-Bold.ttf'),
-    Tengwar: require('../assets/fonts/Tengwar Telcontar.ttf'),
+  const [fontsLoaded, fontError] = useFonts({
+    Lato_400Regular,
+    Lato_400Regular_Italic,
+    Lato_700Bold,
+    Lato_700Bold_Italic,
+
+    Tengwar_Telcontar: require('../assets/fonts/Tengwar Telcontar.ttf'),
+    Tengwar_Feanor: require('../assets/fonts/Tengwar Feanor.ttf'),
+    Cirth: require('../assets/fonts/Tolkien Dwarf Runes.ttf'),
     ...FontAwesome.font,
   });
 
-  // Expo Router uses Error Boundaries to catch errors in the navigation tree.
-  useEffect(() => {
-    if (error) throw error;
-  }, [error]);
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded || fontError) {
+      await SplashScreen.hideAsync();
     }
-  }, [loaded]);
+  }, [fontsLoaded, fontError]);
 
-  if (!loaded) {
+  if (!fontsLoaded && !fontError) {
     return null;
   }
 
   return <RootLayoutNav />;
 }
 
+const tokenCache = {
+  getToken: async function(key) {
+    try {
+      return await SecureStore.getItemAsync(key);
+    }
+    catch (error) {
+      return error;
+    }
+  },
+  saveToken: async function(key, value) {
+    try {
+      return await SecureStore.setItemAsync(key, value);
+    }
+    catch (error) {
+      return error;
+    }
+  }
+};
+
+const InitialLayout = () => {
+  return <Slot />
+}
+
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="languageModal" options={{ presentation: 'modal' }} />
-        <Stack.Screen name="userModal" options={{ presentation: 'modal' }} />
-      </Stack>
-    </ThemeProvider>
+      <ClerkProvider publishableKey={EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY} tokenCache={tokenCache}>
+        <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+          <InitialLayout />
+          <Stack>
+            <Stack.Screen name="(tabs)/sindarin" options={{ headerShown: false }} />
+            <Stack.Screen name="languageModal" options={{ presentation: 'modal' }} />
+            <Stack.Screen name="userModal" options={{ presentation: 'modal' }} />
+          </Stack>
+        </ThemeProvider>
+      </ClerkProvider>
   );
 }

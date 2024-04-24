@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "template_js",
-    "slug": "template_js",
-    "version": "1.0.0",
+    "name": "Nolmë",
+    "slug": "nolme-app",
+    "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "nolme-app",
     "userInterfaceStyle": "automatic",
-    "author":"Mr.ConQueso",
+    "author": "Mr.ConQueso",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
@@ -17,13 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "net.mrconqueso.nolme-app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "net.mrconqueso.nolme_app"
     },
     "web": {
       "bundler": "metro",
@@ -31,10 +33,19 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "9616f646-e152-48ca-89b6-1a076bbfc010"
+      }
     }
   }
 }

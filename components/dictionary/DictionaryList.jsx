@@ -7,6 +7,7 @@ import {SIZES} from "../../constants/Theme";
 import AppH1 from "../theme/AppH1";
 import SearchBar from "./SearchBar";
 import {responsiveWidth} from "react-native-responsive-dimensions";
+import TextButton from "../buttons/TextButton";
 
 const PAGE_SIZE = 12;
 
@@ -84,8 +85,8 @@ const List = ({ data }) => {
     const PageNavigationButtons = () => {
         return (
             <AppView style={styles.pageNavigation}>
-                <Button title="Previous Page" onPress={prevPage} disabled={currentPage === 0} />
-                <Button
+                <TextButton title="Previous Page" onPress={prevPage} disabled={currentPage === 0} />
+                <TextButton
                     title="Next Page"
                     onPress={nextPage}
                     disabled={currentPage * PAGE_SIZE + PAGE_SIZE >= sortedData.length}
@@ -123,7 +124,7 @@ const List = ({ data }) => {
     return (
         <SafeAreaView style={styles.list__container}>
             <AppView style={styles.header}>
-                {!clicked && <AppH1 style={styles.title}>Programming Languages</AppH1>}
+                {/*!clicked && <AppH1 style={styles.title}>Programming Languages</AppH1>*/}
                 <SearchBar
                     searchPhrase={searchPhrase}
                     setSearchPhrase={setSearchPhrase}
@@ -156,6 +157,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignSelf: "center",
+        paddingBottom: 15,
     },
     header: {
         paddingTop: Platform.OS === "android" ? 10 : 0,

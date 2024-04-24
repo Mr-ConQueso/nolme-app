@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import {SIZES} from "../../constants/Theme";
+import {FONTS, SIZES} from "../../constants/Theme";
 import Colors from "../../constants/Colors";
 
 export default function AppTengwarText ({ children, style }) {
@@ -15,7 +15,7 @@ const styles = {
     text: {
         fontSize: SIZES.paragraphSmall,
         lineHeight: 15,
-        fontFamily: "Tengwar",
+        fontFamily: FONTS.tengwar,
         color: Colors.dark.text
     },
 };

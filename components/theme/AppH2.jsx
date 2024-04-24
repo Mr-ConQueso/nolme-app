@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import {SIZES} from "../../constants/Theme";
+import {FONTS, SIZES} from "../../constants/Theme";
 import Colors from "../../constants/Colors";
 
 export default function AppH2 ({ children, style }) {
@@ -13,7 +13,7 @@ export default function AppH2 ({ children, style }) {
 
 const styles = {
     text: {
-        fontFamily: "Lato_Bold",
+        fontFamily: FONTS.bold,
         fontSize: SIZES.h2,
         lineHeight: 15,
         color: Colors.dark.subtitle

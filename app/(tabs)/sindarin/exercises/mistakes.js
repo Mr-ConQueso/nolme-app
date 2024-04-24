@@ -1,10 +1,9 @@
 import React from 'react';
 import {Platform, Pressable, SafeAreaView, ScrollView, StyleSheet} from 'react-native';
-import Colors from "../../constants/Colors";
-import AppView from "../../components/theme/AppView";
-import AppH1 from "../../components/theme/AppH1";
-import {SIZES} from "../../constants/Theme";
-import {Link} from "expo-router";
+import Colors from "../../../../constants/Colors";
+import AppView from "../../../../components/theme/AppView";
+import AppH1 from "../../../../components/theme/AppH1";
+import {SIZES} from "../../../../constants/Theme";
 
 const ExerciseButton = ({title, onTap, style}) => {
   return (
@@ -30,19 +29,9 @@ export default function ExercisesScreen() {
           <ScrollView contentContainerStyle={[styles.content]}>
               
               <AppView style={styles.backgroundContainer}>
-                  <AppH1 style={styles.heading}>Learning Exercises</AppH1>
-                  <ExerciseButton title="Mistakes" />
-                  <ExerciseButton title="Words" />
+                  <AppH1 style={styles.heading}>Review your {"\n"}recent mistakes</AppH1>
 
-                  <Link href="stories/gandalf-story">
-                      <ExerciseButton title="Stories" />
-                  </Link>
-
-                  <ExerciseButton title="Poems" />
-
-                  <AppH1 style={styles.heading}>Conversation</AppH1>
-                  <ExerciseButton title="Speak" />
-                  <ExerciseButton title="Listen" />
+                  <ExerciseButton title="Start" />
               </AppView>
               
           </ScrollView>

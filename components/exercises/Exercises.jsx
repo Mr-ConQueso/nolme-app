@@ -2,8 +2,8 @@ import {Image, TouchableOpacity, View} from "react-native";
 import React from "react";
 import {AnimatedCircularProgress} from "react-native-circular-progress";
 import {useNavigation} from "@react-navigation/native";
-import Colors from "../constants/Colors";
-import AppH1 from "./theme/AppH1";
+import Colors from "../../constants/Colors";
+import AppH1 from "../theme/AppH1";
 
 const Exercises = ({ exercise }) => {
     const navigation = useNavigation();

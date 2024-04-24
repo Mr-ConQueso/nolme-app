@@ -1,18 +1,19 @@
 import React from 'react';
-import {Text} from 'react-native';
 import clamp from "react-native-web/src/vendor/react-native/Utilities/clamp";
 import {responsiveWidth} from "react-native-responsive-dimensions";
-import {SIZES} from "../../constants/Theme";
+import {FONTS, SIZES} from "../../constants/Theme";
 import Colors from "../../constants/Colors";
 import AppView from "../theme/AppView";
+import AppTengwarText from "../theme/AppTengwarText";
+import AppText from "../theme/AppText";
 
 export default function TengwarScriptButton ({ scriptIcon, scriptPronunciation, progress }) {
 
     return (
         <AppView style={styles.button}>
             <AppView style={styles.textContainer}>
-                <Text style={styles.scriptText}>{scriptIcon}</Text>
-                <Text style={styles.pronunciationText}>{scriptPronunciation}</Text>
+                <AppTengwarText style={styles.scriptText}>{scriptIcon}</AppTengwarText>
+                <AppText style={styles.pronunciationText}>{scriptPronunciation}</AppText>
             </AppView>
             <AppView style={styles.progressBarContainer}>
                 {/* <ProgressBar progress={progress} width={null} color="#FFFFFF" /> */}
@@ -44,7 +45,6 @@ const styles= ({
         alignContent: 'center',
     },
     scriptText: {
-        fontFamily: "Tengwar",
         color: Colors.dark.text,
         fontSize: 24,
         fontWeight: 'bold',

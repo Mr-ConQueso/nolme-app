@@ -1,13 +1,13 @@
 import {Dimensions, Image, Platform, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import Svg, {Path} from "react-native-svg";
 import {useNavigation, useRoute} from "@react-navigation/native";
-import WordList from "../components/WordList";
+import WordList from "../../../../components/exercises/WordList";
 import * as Progress from "react-native-progress";
-import TalkingBallon from "../components/TalkingBallon";
-import Footer from "../components/Footer";
+import TalkingBallon from "../../../../components/exercises/TalkingBallon";
+import ExerciseModal from "../../../../components/ExerciseModal";
 import {useEffect, useState} from "react";
-import Word from "../components/Word";
-import Colors from "../constants/Colors";
+import Word from "../../../../components/exercises/Word";
+import Colors from "../../../../constants/Colors";
 
 const SindarinExercisePage = () => {
   const navigation = useNavigation();
@@ -86,7 +86,7 @@ const SindarinExercisePage = () => {
           <View style={styles.questionCard}>
             <Image
                 style={styles.image}
-                source={require("../assets/images/character2.png")}
+                source={require("../../../../assets/images/characters/character2.png")}
             />
 
             <TalkingBallon sentence={questions.question} />
@@ -99,7 +99,7 @@ const SindarinExercisePage = () => {
           ))}
         </WordList>
 
-        <Footer correctAnswer={questions.answer} checking={checking} />
+        <ExerciseModal correctAnswer={questions.answer} checking={checking} />
       </View>
   );
 };

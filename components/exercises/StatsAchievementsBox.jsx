@@ -1,7 +1,7 @@
 import React from 'react';
-import {SIZES} from "../constants/Theme";
-import Colors from "../constants/Colors";
-import AppView from "./theme/AppView";
+import {SIZES} from "../../constants/Theme";
+import Colors from "../../constants/Colors";
+import AppView from "../theme/AppView";
 import {responsiveHeight, responsiveWidth} from "react-native-responsive-dimensions";
 import {Image} from "react-native";
 

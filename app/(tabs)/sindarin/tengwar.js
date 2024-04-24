@@ -1,13 +1,13 @@
 import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
-import AppH1 from "../../components/theme/AppH1";
-import AppText from "../../components/theme/AppText";
-import TextButton from "../../components/buttons/TextButton";
-import TengwarScriptButton from "../../components/buttons/TengwarScriptButton";
-import Colors from "../../constants/Colors";
-import AppView from "../../components/theme/AppView";
+import AppH1 from "../../../components/theme/AppH1";
+import AppText from "../../../components/theme/AppText";
+import TextButton from "../../../components/buttons/TextButton";
+import TengwarScriptButton from "../../../components/buttons/TengwarScriptButton";
+import Colors from "../../../constants/Colors";
+import AppView from "../../../components/theme/AppView";
 import {responsiveWidth} from "react-native-responsive-dimensions";
 import clamp from "react-native-web/src/vendor/react-native/Utilities/clamp";
-import {SIZES} from "../../constants/Theme";
+import {SIZES} from "../../../constants/Theme";
 
 const ConsonantButtonGrid = () => {
 

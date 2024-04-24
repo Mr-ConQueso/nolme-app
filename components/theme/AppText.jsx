@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import {SIZES} from "../../constants/Theme";
+import {FONTS, SIZES} from "../../constants/Theme";
 import Colors from "../../constants/Colors";
 
 export default function AppText ({ children, style}) {
@@ -14,7 +14,7 @@ export default function AppText ({ children, style}) {
 const styles = {
     text: {
         fontSize: SIZES.paragraphSmall,
-        fontFamily: "Lato",
+        fontFamily: FONTS.default,
         color: Colors.dark.text
     },
 };

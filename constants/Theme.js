@@ -1,5 +1,6 @@
 import clamp from "react-native-web/src/vendor/react-native/Utilities/clamp";
 import {responsiveWidth} from "react-native-responsive-dimensions";
+import {Platform} from "react-native";
 
 const SIZES = {
   paragraphSmall: clamp(16, responsiveWidth(4), 20),
@@ -12,4 +13,23 @@ const SIZES = {
   defaultContentWidth: clamp(200, responsiveWidth(90), 1000),
 };
 
-export { SIZES };
+const FONTS = {
+  default: Platform.select({
+    android: 'Lato_400Regular',
+    ios: 'Lato-Regular',
+  }),
+  bold: Platform.select({
+    android: 'Lato_700Bold',
+    ios: 'Lato-Bold',
+  }),
+  tengwar: Platform.select({
+    android: 'Tengwar Telcontar',
+    ios: 'Tengwar Telcontar',
+  }),
+  cirth: Platform.select({
+    android: 'Tolkien Dwarf Runes',
+    ios: 'Tolkien Dwarf Runes',
+  })
+}
+
+export { SIZES, FONTS};
