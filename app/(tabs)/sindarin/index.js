@@ -1,4 +1,4 @@
-import {FlatList, Image, SafeAreaView, StyleSheet,} from "react-native";
+import {FlatList, Image, StyleSheet,} from "react-native";
 import Exercises from "../../../components/exercises/Exercises";
 import React from "react";
 import {useNavigation} from "@react-navigation/native";
@@ -7,14 +7,14 @@ import data from "../../../data/courseData.json";
 import {StatusBar} from "expo-status-bar";
 import Colors from "../../../constants/Colors";
 import AppView from "../../../components/theme/AppView";
+import AppSafeAreaView from "../../../components/theme/AppSafeAreaView";
 
-const Home = () => {
+export default function Home() {
   const navigation = useNavigation();
 
   return (
-      <SafeAreaView style={styles.container}>
+      <AppSafeAreaView style={styles.container}>
         <StatusBar style="auto" />
-
         <FlatList
             data={data.sections}
             renderItem={renderSection}
@@ -37,7 +37,7 @@ const Home = () => {
               </AppView>
             }
         />
-      </SafeAreaView>
+      </AppSafeAreaView>
   );
 };
 
@@ -61,14 +61,12 @@ const renderSection = ({ item }) => {
 
 const styles= StyleSheet.create({
   container: {
-    alignItems: "center",
     flex: 1,
     backgroundColor: Colors.dark.background,
   },
   body: {
-    flex: 1,
-    padding: 10,
     alignItems: "center",
+    padding: 10,
   },
   unitLogo: {
     height: 120,
@@ -86,5 +84,3 @@ const styles= StyleSheet.create({
     paddingVertical: 10,
   },
 });
-
-export default Home;

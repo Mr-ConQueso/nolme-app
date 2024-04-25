@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     achievementsBox: {
         borderColor: Colors.dark.gray,
         borderWidth: SIZES.defaultBorderWidth,
-        width: responsiveWidth(45),
+        width: '50%',
         padding: 20,
         margin: 5,
         borderRadius: SIZES.defaultRounding

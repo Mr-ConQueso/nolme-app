@@ -38,14 +38,13 @@ export default function StatsProgressBox({ achievementIcon }) {
 
 const styles = StyleSheet.create({
     achievementsBox: {
-        paddingHorizontal: responsiveWidth(10),
-        paddingTop: responsiveHeight(3),
-        paddingBottom: responsiveHeight(12),
+        width: '100%',
         borderColor: Colors.dark.gray,
         borderWidth: SIZES.defaultBorderWidth,
         padding: 30,
         margin: 5,
-        borderRadius: SIZES.defaultRounding
+        borderRadius: SIZES.defaultRounding,
+        marginBottom: 30
     },
     row: {
         flexDirection: 'row',

@@ -51,6 +51,7 @@ const styles= ({
     },
     pronunciationText: {
         color: Colors.dark.lightGray,
+        marginTop: 12,
         fontSize: 18,
     },
 });

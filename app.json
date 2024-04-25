@@ -21,11 +21,12 @@
       "bundleIdentifier": "net.mrconqueso.nolme-app"
     },
     "android": {
+      "versionCode": 1,
+      "package": "net.mrconqueso.nolme_app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "package": "net.mrconqueso.nolme_app"
+      }
     },
     "web": {
       "bundler": "metro",

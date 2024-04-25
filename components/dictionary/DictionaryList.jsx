@@ -8,10 +8,11 @@ import AppH1 from "../theme/AppH1";
 import SearchBar from "./SearchBar";
 import {responsiveWidth} from "react-native-responsive-dimensions";
 import TextButton from "../buttons/TextButton";
+import IconButton from "../buttons/IconButton";
+import icons from "../../constants/Icons";
 
 const PAGE_SIZE = 12;
 
-// Define custom word type order
 const wordTypeOrder = {
     "pronoun": 1,
     "noun": 2,
@@ -122,16 +123,31 @@ const List = ({ data }) => {
     };
 
     return (
-        <SafeAreaView style={styles.list__container}>
+        <SafeAreaView style={styles.container}>
             <AppView style={styles.header}>
-                {/*!clicked && <AppH1 style={styles.title}>Programming Languages</AppH1>*/}
-                <SearchBar
-                    searchPhrase={searchPhrase}
-                    setSearchPhrase={setSearchPhrase}
-                    clicked={clicked}
-                    setClicked={setClicked}
-                />
-                <PageNavigationButtons/>
+                <AppView style={styles.searchContainer}>
+                    {/*!clicked && <AppH1 style={styles.title}>Programming Languages</AppH1>*/}
+                    <IconButton
+                        defaultIcon={icons.previous}
+                        onPress={prevPage}
+                        disabled={currentPage === 0}
+                        size={30}
+                        style={{ tintColor: Colors.dark.gray }}
+                    />
+                    <SearchBar
+                        searchPhrase={searchPhrase}
+                        setSearchPhrase={setSearchPhrase}
+                        clicked={clicked}
+                        setClicked={setClicked}
+                    />
+                    <IconButton
+                        defaultIcon={icons.next}
+                        onPress={nextPage}
+                        disabled={currentPage * PAGE_SIZE + PAGE_SIZE >= sortedData.length}
+                        size={30}
+                        style={{ tintColor: Colors.dark.gray }}
+                    />
+                </AppView>
             </AppView>
             <AppView
                 onStartShouldSetResponder={() => {
@@ -147,10 +163,8 @@ const List = ({ data }) => {
 export default List;
 
 const styles = StyleSheet.create({
-    list__container: {
-        margin: 10,
-        height: "85%",
-        width: "100%",
+    container: {
+        alignItems: 'center',
     },
     pageNavigation: {
         width: SIZES.defaultContentWidth,
@@ -163,6 +177,11 @@ const styles = StyleSheet.create({
         paddingTop: Platform.OS === "android" ? 10 : 0,
         width: responsiveWidth(100),
         backgroundColor: Colors.dark.tertiary,
-        alignItems: "center"
+        alignItems: "center",
+        marginBottom: 15
+    },
+    searchContainer: {
+        width: SIZES.defaultContentWidth,
+        flexDirection: "row",
     }
 });

@@ -2,8 +2,9 @@ import React from 'react';
 import {SIZES} from "../../constants/Theme";
 import Colors from "../../constants/Colors";
 import AppView from "../theme/AppView";
-import {responsiveHeight, responsiveWidth} from "react-native-responsive-dimensions";
 import {Image} from "react-native";
+import clamp from "react-native-web/src/vendor/react-native/Utilities/clamp";
+import {responsiveWidth} from "react-native-responsive-dimensions";
 
 export default function StatsAchievementsBox ({ achievementIcon }) {
 
@@ -16,11 +17,10 @@ export default function StatsAchievementsBox ({ achievementIcon }) {
 
 const styles= ({
     achievementsBox: {
-        paddingHorizontal: responsiveWidth(10),
-        paddingVertical: responsiveHeight(6),
+        paddingHorizontal: clamp(40, responsiveWidth(5), 300),
+        paddingVertical: clamp(40, responsiveWidth(5), 300) * 1.5,
         borderColor: Colors.dark.gray,
         borderWidth: SIZES.defaultBorderWidth,
-        padding: 30,
         margin: 5,
         borderRadius: SIZES.defaultRounding
     },

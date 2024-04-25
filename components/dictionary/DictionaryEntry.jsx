@@ -5,6 +5,7 @@ import AppText from "../theme/AppText";
 import icons from "../../constants/Icons";
 import Colors from "../../constants/Colors";
 import HTMLStyledText from "../theme/HTMLStyledText";
+import {SIZES} from "../../constants/Theme";
 
 export default function DictionaryEntry ({ transliteratedWord, translatedWord, wordType, pronunciationText, descriptionText, conceptualDevelopment}) {
     return (
@@ -53,6 +54,7 @@ const ConceptualDevelopment = ({ conceptualDevelopment }) => {
 
 const styles= ({
     container: {
+        width: SIZES.defaultContentWidth,
         backgroundColor: Colors.dark.gray,
         padding: 20,
         borderRadius: 10,

@@ -1,13 +1,13 @@
-import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 import AppH1 from "../../../components/theme/AppH1";
 import AppText from "../../../components/theme/AppText";
 import TextButton from "../../../components/buttons/TextButton";
 import TengwarScriptButton from "../../../components/buttons/TengwarScriptButton";
 import Colors from "../../../constants/Colors";
 import AppView from "../../../components/theme/AppView";
-import {responsiveWidth} from "react-native-responsive-dimensions";
-import clamp from "react-native-web/src/vendor/react-native/Utilities/clamp";
 import {SIZES} from "../../../constants/Theme";
+import React from "react";
+import AppSafeAreaView from "../../../components/theme/AppSafeAreaView";
 
 const ConsonantButtonGrid = () => {
 
@@ -54,7 +54,7 @@ const ConsonantButtonGrid = () => {
 const VowelButtonGrid = () => {
 
   const consonantsDictionary = {
-    button1: { scriptIcon: '', pronunciationText: "a" },
+    button1: { scriptIcon: '', pronunciationText: "a" },
     button2: { scriptIcon: '', pronunciationText: "e" },
     button3: { scriptIcon: '', pronunciationText: "i" },
     button4: { scriptIcon: '', pronunciationText: "o" },
@@ -143,11 +143,10 @@ const NumberButtonGrid = () => {
 
 export default function TengwarScreen() {
   return (
-      <SafeAreaView style={styles.container}>
-        <ScrollView contentContainerStyle={styles.scrollContent}>
+      <AppSafeAreaView style={styles.container}>
+        <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false} >
 
           <AppView style={styles.textContent}>
-
             <AppH1 style={styles.heading}>
               Let's learn Tengwar
             </AppH1>
@@ -185,13 +184,14 @@ export default function TengwarScreen() {
           <NumberButtonGrid />
 
         </ScrollView>
-      </SafeAreaView>
+      </AppSafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
+const styles= StyleSheet.create({
   container: {
     backgroundColor: Colors.dark.background,
+    flex: 1
   },
   scrollContent: {
     width: SIZES.defaultContentWidth,
@@ -215,6 +215,7 @@ const styles = StyleSheet.create({
   heading: {
     marginBottom: 20,
     marginTop: 10,
+    alignSelf: 'center'
   },
   paragraph: {
     marginBottom: 20,

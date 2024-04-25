@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, TextInput, View, Keyboard, Button } from "react-native";
-import { Feather, Entypo } from "@expo/vector-icons";
+import {Keyboard, StyleSheet, TextInput, View} from "react-native";
+import {Entypo, Feather} from "@expo/vector-icons";
 import Colors from "../../constants/Colors";
 import TextButton from "../buttons/TextButton";
 
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         justifyContent: "flex-start",
         alignItems: "center",
         flexDirection: "row",
-        width: "90%",
+        width: "70%",
 
     },
     searchBar__unclicked: {
