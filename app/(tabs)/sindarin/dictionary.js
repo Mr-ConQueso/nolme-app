@@ -1,6 +1,6 @@
 import React from "react";
 import {StyleSheet,} from "react-native";
-import DictionaryList from "../../../components/dictionary/DictionaryList";
+import DictionaryList from "../../../components/dictionary/DictionaryList_Sindarin";
 import Colors from "../../../constants/Colors";
 import sindarinDictionary from "../../../data/dictionaries/elvish/word-dictionary.json";
 import AppSafeAreaView from "../../../components/theme/AppSafeAreaView";
