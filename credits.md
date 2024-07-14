@@ -13,17 +13,15 @@
 [Parf Edhellen / Elfdict](https://github.com/galadhremmin/Parf-Edhellen)<br>
 
 ## Fonts
-Tengwar Telcontar
-
-Tolkien Dwarf Runes
-
-DTSD Dwarvish
+Tengwar Telcontar<br>
+Tolkien Dwarf Runes<br>
+DTSD Dwarvish<br>
 
 ## Code
-[ReactJS Dictionary example](https://github.com/upgraded57/Dictionary)
-Expo router pages
-[Duolingo Clone React](https://github.com/abdulkadir-erdeger/duolingo-clone)
-[React native Duo drag-and-drop](https://github.com/jamsch/react-native-duo-drag-drop)
+[ReactJS Dictionary example](https://github.com/upgraded57/Dictionary)<br>
+Expo router pages<br>
+[Duolingo Clone React](https://github.com/abdulkadir-erdeger/duolingo-clone)<br>
+[React native Duo drag-and-drop](https://github.com/jamsch/react-native-duo-drag-drop)<br>
 
 ### Technologies
 - React native
