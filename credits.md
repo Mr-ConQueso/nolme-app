@@ -2,7 +2,7 @@
 ## Dictionaries
 **Sindarin & Quenya**
 [Parf Edhellen / Elfdict](https://github.com/galadhremmin/Parf-Edhellen)
-
+\n
 **Khuzdul**
 [The Dwarrow Scholar](https://www.dwarrowscholar.com/)
 [Parf Edhellen / Elfdict](https://github.com/galadhremmin/Parf-Edhellen)
