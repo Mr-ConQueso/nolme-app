@@ -1,15 +1,16 @@
 
 ## Dictionaries
-**Sindarin & Quenya**
-[Parf Edhellen / Elfdict](https://github.com/galadhremmin/Parf-Edhellen)<br>
-**Khuzdul**
-[The Dwarrow Scholar](https://www.dwarrowscholar.com/)
+**Sindarin & Quenya**<br>
 [Parf Edhellen / Elfdict](https://github.com/galadhremmin/Parf-Edhellen)<br>
 
-**Black Speech / Orkish**
-[Eldamo](https://eldamo.org/content/language-pages/lang-bs.html)
-[Black Speech School](http://blackspeech.de/index.php)
-[Parf Edhellen / Elfdict](https://github.com/galadhremmin/Parf-Edhellen)\
+**Khuzdul**<br>
+[The Dwarrow Scholar](https://www.dwarrowscholar.com/)<br>
+[Parf Edhellen / Elfdict](https://github.com/galadhremmin/Parf-Edhellen)<br>
+
+**Black Speech / Orkish**<br>
+[Eldamo](https://eldamo.org/content/language-pages/lang-bs.html)<br>
+[Black Speech School](http://blackspeech.de/index.php)<br>
+[Parf Edhellen / Elfdict](https://github.com/galadhremmin/Parf-Edhellen)<br>
 
 ## Fonts
 Tengwar Telcontar
