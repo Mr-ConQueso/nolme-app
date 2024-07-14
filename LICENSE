@@ -1,0 +1,56 @@
+GENERAL INTERACTIVE PRODUCT LICENSE | RESTRICTIVE NON-COMMERCIAL | COPYLEFT
+(GIPL-RNC-CPL-1.0) Version 1, 14 July 2024
+
+This license encompasses the following distinct areas:
+
+1. Code Licensing
+2. Asset Licensing
+3. Documentation Licensing
+
+---
+
+1. Code Licensing
+
+All code included in this work is licensed under the GNU General Public License, Version 3 (GPL-3.0). You may use, distribute, and modify the code under the terms of the GPL-3.0. For more details, please refer to the full text of the GPL-3.0 at https://www.gnu.org/licenses/gpl-3.0.html
+
+2. Asset Licensing
+
+All assets (including but not limited to images, 3D models, textures, materials, and similar content) included in this work are licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). You may share and adapt the assets, provided that:
+- Attribution is given to the original creator.
+- The assets are not used for commercial purposes.
+- Any derivatives of the assets are shared under the same or compatible license.
+For more details, please refer to the full text of the CC BY-NC-SA 4.0 at https://creativecommons.org/licenses/by-nc-sa/4.0/.
+
+3. Documentation Licensing
+
+All documentation included in this work is licensed under the Creative Commons Zero v1.0 Universal (CC0 1.0). You may copy, modify, distribute, and perform the work, even for commercial purposes, all without asking permission. For more details, please refer to the full text of the CC0 1.0 at https://creativecommons.org/publicdomain/zero/1.0/.
+
+---
+
+Terms and Conditions
+
+1. Revised Versions of this License.
+
+The individual Mr.ConQueso may publish revised and/or new versions of the GIP License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.
+
+Each version is given a distinguishing version number. If the Product specifies that a certain numbered version of the GNU General Public License "or any later version" applies to it, you have the option of following the terms and conditions either of that numbered version or of any later version published in this repository. If the Product does not specify a version number of the GIP License, you may choose any version ever published in the following repository: https://github.com/Mr-ConQueso/GIPL-RNC-CPL/.
+
+If the Product specifies that a proxy can decide which future versions of the GIP License can be used, that proxy's public statement of acceptance of a version permanently authorizes you to choose that version for the Product.
+
+Later license versions may give you additional or different permissions. However, no additional obligations are imposed on any author or copyright holder as a result of your choosing to follow a later version.
+
+2. Disclaimer of Warranty.
+
+THERE IS NO WARRANTY FOR THE PRODUCT, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+3. Limitation of Liability.
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+4. Interpretation of Sections 2 and 3.
+
+If the disclaimer of warranty and limitation of liability provided above cannot be given local legal effect according to their terms, reviewing courts shall apply local law that most closely approximates an absolute waiver of all civil liability in connection with the Product, unless a warranty or assumption of liability accompanies a copy of the Product in return for a fee.
+
+---
+
+By using, modifying, distributing, or otherwise engaging with this work, you agree to comply with the terms and conditions of each distinct area of licensing as described above.
