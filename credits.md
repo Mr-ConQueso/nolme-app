@@ -1,5 +1,5 @@
 
-##### Dictionaries
+# Dictionaries
 **Sindarin & Quenya**
 [Parf Edhellen / Elfdict](https://github.com/galadhremmin/Parf-Edhellen)
 
@@ -12,18 +12,18 @@
 [Black Speech School](http://blackspeech.de/index.php)
 [Parf Edhellen / Elfdict](https://github.com/galadhremmin/Parf-Edhellen)
 
-##### Fonts
+# Fonts
 Tengwar Telcontar
 Tolkien Dwarf Runes
 DTSD Dwarvish
 
-##### Code
+# Code
 [ReactJS Dictionary example](https://github.com/upgraded57/Dictionary)
 Expo router pages
 [Duolingo Clone React](https://github.com/abdulkadir-erdeger/duolingo-clone)
 [React native Duo drag-and-drop](https://github.com/jamsch/react-native-duo-drag-drop)
 
-##### Technologies
+## Technologies
 - React native
 - Expo & expo router
 - eSpeak NG
