@@ -1,10 +1,10 @@
 
 ## Dictionaries
 **Sindarin & Quenya**
-[Parf Edhellen / Elfdict](https://github.com/galadhremmin/Parf-Edhellen)\
+[Parf Edhellen / Elfdict](https://github.com/galadhremmin/Parf-Edhellen)<br>
 **Khuzdul**
 [The Dwarrow Scholar](https://www.dwarrowscholar.com/)
-[Parf Edhellen / Elfdict](https://github.com/galadhremmin/Parf-Edhellen)\
+[Parf Edhellen / Elfdict](https://github.com/galadhremmin/Parf-Edhellen)<br>
 
 **Black Speech / Orkish**
 [Eldamo](https://eldamo.org/content/language-pages/lang-bs.html)
