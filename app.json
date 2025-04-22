@@ -2,12 +2,12 @@
   "expo": {
     "name": "Nolmë",
     "slug": "nolme-app",
-    "version": "0.0.1",
+    "version": "alpha-0.0.2",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "nolme-app",
+    "scheme": "nolme",
     "userInterfaceStyle": "automatic",
-    "author": "Mr.ConQueso",
+    "owner": "mr.conqueso",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
@@ -17,12 +17,10 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "net.mrconqueso.nolme-app"
+      "supportsTablet": true
     },
     "android": {
-      "versionCode": 1,
-      "package": "net.mrconqueso.nolme_app",
+      "versionCode": 2,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -45,7 +43,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "9616f646-e152-48ca-89b6-1a076bbfc010"
+        "projectId": null
       }
     }
   }
