@@ -2,8 +2,6 @@
 
 # Nölme
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
 A language learning app based on Babel and Duolingo that aims to teach the four most prevalent languages from J.R.R. Tolkien's Legendarium: **Sindarin**, **Quenya**, **Khuzdul** & **Black Speech**
 </div>
 
